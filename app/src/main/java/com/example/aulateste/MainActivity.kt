@@ -16,9 +16,16 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Text("Hello world!")
-            // Função Text mostra o parâmetro passado
-            // ao método como um texto na tela.
+            MessageCard("Android");
+            // Chamando a função MessageCard e passando um parâmetro à função.
         }
+    }
+    @Composable // Tornando a função MessageCard composta.
+
+    fun MessageCard(name: String){
+        // Função MessageCard que recebe uma variável do tipo String.
+
+     Text(text = "Hello $name!");
+     // Mostrando um texto na tela com o parâmetro passado à função.
     }
 }
