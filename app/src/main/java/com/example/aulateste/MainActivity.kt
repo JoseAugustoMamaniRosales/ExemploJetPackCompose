@@ -28,4 +28,13 @@ class MainActivity : ComponentActivity() {
      Text(text = "Hello $name!");
      // Mostrando um texto na tela com o parâmetro passado à função.
     }
+
+    @Preview // Visualizar a função PreviewMessageCard sem o emulador.
+    @Composable // Tornando a função PreviewMessageCard composta.
+
+    fun PreviewMessageCard(){ // Função PreviewMessageCard.
+
+        MessageCard("Android");
+        // Chamando a função MessageCard e passa um parâmetro à função.
+    }
 }
